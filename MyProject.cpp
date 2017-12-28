@@ -8,6 +8,11 @@ float parall_s(float a, float b, float c)
 	return 2 * (a*b + a*c + b*c);
 }
 
+float parall_v(float a, float b, float c)
+{
+	return a * b * c;
+}
+
 float check_input(float a)
 {
 	while (true)
@@ -35,6 +40,7 @@ int main()
 	b = check_input(b);
 	c = check_input(c);
 	cout << "Площадь полной поверхности: " << parall_s(a, b, c) << " (кв. ед.)" << endl;
+	cout << "Объем прямоугольного параллелепипеда: " << parall_v(a, b, c) << " (куб. ед)" << endl;
 	system("pause");
 	return 0;
 }
