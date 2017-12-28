@@ -8,6 +8,11 @@ float parall_s(float a, float b, float c)
 	return 2 * (a*b + a*c + b*c);
 }
 
+float parall_v(float a, float b, float c)
+{
+	return a * b * c;
+}
+
 float check_input(float a)
 {
 	while (true)
@@ -17,10 +22,10 @@ float check_input(float a)
 			cin.sync();
 			cin.clear();
 			while (cin.get() != '\n');
-			cout << "Ââåäåíî íå ÷èñëî! Ïîïğîáóéòå åùå ğàç\n";
+			cout << "Ğ’Ğ²ĞµĞ´ĞµĞ½Ğ¾ Ğ½Ğµ Ñ‡Ğ¸ÑĞ»Ğ¾! ĞŸĞ¾Ğ¿Ñ€Ğ¾Ğ±ÑƒĞ¹Ñ‚Ğµ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·\n";
 		}
 		if (a > 0) break;
-		else cout << "Èçìåğåíèÿ íå ìîãóò áûòü îòğèöàòåëüíûìè! Ïîïğîáóéòå åùå ğàç\n";
+		else cout << "Ğ˜Ğ·Ğ¼ĞµÑ€ĞµĞ½Ğ¸Ñ Ğ½Ğµ Ğ¼Ğ¾Ğ³ÑƒÑ‚ Ğ±Ñ‹Ñ‚ÑŒ Ğ¾Ñ‚Ñ€Ğ¸Ñ†Ğ°Ñ‚ĞµĞ»ÑŒĞ½Ñ‹Ğ¼Ğ¸! ĞŸĞ¾Ğ¿Ñ€Ğ¾Ğ±ÑƒĞ¹Ñ‚Ğµ ĞµÑ‰Ğµ Ñ€Ğ°Ğ·\n";
 	}
 	return a;
 }
@@ -30,11 +35,12 @@ int main()
 	setlocale(LC_ALL, "rus");
 	float a, b, c;
 	a = b = c = NULL;
-	cout << "Ââåäèòå èçìåğåíèÿ ïğÿìîóãîëüíîãî ïàğàëëåëåïèïåäà:\n";
+	cout << "Ğ’Ğ²ĞµĞ´Ğ¸Ñ‚Ğµ Ğ¸Ğ·Ğ¼ĞµÑ€ĞµĞ½Ğ¸Ñ Ğ¿Ñ€ÑĞ¼Ğ¾ÑƒĞ³Ğ¾Ğ»ÑŒĞ½Ğ¾Ğ³Ğ¾ Ğ¿Ğ°Ñ€Ğ°Ğ»Ğ»ĞµĞ»ĞµĞ¿Ğ¸Ğ¿ĞµĞ´Ğ°:\n";
 	a = check_input(a);
 	b = check_input(b);
 	c = check_input(c);
-	cout << "Ïëîùàäü ïîëíîé ïîâåğõíîñòè: " << parall_s(a, b, c) << " (êâ. åä.)" << endl;
+	cout << "ĞŸĞ»Ğ¾Ñ‰Ğ°Ğ´ÑŒ Ğ¿Ğ¾Ğ»Ğ½Ğ¾Ğ¹ Ğ¿Ğ¾Ğ²ĞµÑ€Ñ…Ğ½Ğ¾ÑÑ‚Ğ¸: " << parall_s(a, b, c) << " (ÃªÃ¢. Ã¥Ã¤.)" << endl;
+	cout << "ĞĞ±ÑŠĞµĞ¼ Ğ¿Ñ€ÑĞ¼Ğ¾ÑƒĞ³Ğ¾Ğ»ÑŒĞ½Ğ¾Ğ³Ğ¾ Ğ¿Ğ°Ñ€Ğ°Ğ»Ğ»ĞµĞ»ĞµĞ¿Ğ¸Ğ¿ĞµĞ´Ğ°: " << parall_v(a, b, c) << " (ÃªÃ³Ã¡. Ã¥Ã¤)" << endl;
 	system("pause");
 	return 0;
 }
